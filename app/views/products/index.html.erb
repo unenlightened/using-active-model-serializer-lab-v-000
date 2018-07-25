@@ -13,7 +13,9 @@ $(function() {
       var inventoryText = (product.inventory > 0 ) ? "Available" : "Sold Out";
       var descriptionText = "<p>" + product.description + "</p><p><strong>" + inventoryText + "</strong></p>";
       if(product.orders.length > 0) {
+        descriptionText+= "<ul>";
 
+        descriptionText+= "</ul>";
       }
       $("#product-" + id).html(descriptionText);
     });
