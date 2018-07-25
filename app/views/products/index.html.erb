@@ -14,7 +14,8 @@ $(function() {
       var descriptionText = "<p>" + product.description + "</p><p><strong>" + inventoryText + "</strong></p>";
       if(product.orders.length > 0) {
         descriptionText+= "<ul>";
-
+        product.orders.forEach(function(order) {
+        });
         descriptionText+= "</ul>";
       }
       $("#product-" + id).html(descriptionText);
