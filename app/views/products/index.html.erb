@@ -12,13 +12,9 @@ $(function() {
     $.get("/products/" + id + ".json", function(product) {
       var inventoryText = (product.inventory > 0 ) ? "Available" : "Sold Out";
       var descriptionText = "<p>" + product.description + "</p><p><strong>" + inventoryText + "</strong></p>";
-      // if(product.orders.length > 0) {
-      //   descriptionText+= "<ul>";
-      //     product.orders.forEach(function(order) {
-      //       descriptionText += "<li>" + order.id + "-" order.created_at + "</li>";
-      //     });
-      //   descriptionText+= "</ul>";
-      // }
+      if(product.orders.length > 0) {
+      
+      }
       $("#product-" + id).html(descriptionText);
     });
   });
