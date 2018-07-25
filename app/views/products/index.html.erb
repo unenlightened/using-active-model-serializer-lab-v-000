@@ -15,6 +15,7 @@ $(function() {
       if(product.orders.length > 0) {
         descriptionText+= "<ul>";
         product.orders.forEach(function(order) {
+          descriptionText += "<li>" + order.id + "-" + order.created_at + "</li>";
         });
         descriptionText+= "</ul>";
       }
